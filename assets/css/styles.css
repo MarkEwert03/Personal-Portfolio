@@ -1,0 +1,28 @@
+/* Custom Styles */
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.from-primary {
+    --tw-gradient-from: #3b82f6;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(59, 130, 246, 0));
+}
+
+.to-secondary {
+    --tw-gradient-to: #8b5cf6;
+}
+
+.project-card .relative:hover .absolute {
+    opacity: 1;
+}
+
+.project-card img {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
