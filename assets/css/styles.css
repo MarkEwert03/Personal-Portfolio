@@ -15,6 +15,30 @@
     --tw-gradient-to: #8b5cf6;
 }
 
+.project-card .relative {
+    position: relative;
+}
+
+.project-card .relative .absolute {
+    pointer-events: none;
+}
+
+.project-card:hover .relative .absolute {
+    opacity: 1;
+}
+
 .dropdown-content {
-    transition: max-height 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    opacity: 0;
+}
+
+.dropdown-content.show {
+    max-height: 500px;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+    opacity: 1;
 }
