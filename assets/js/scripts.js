@@ -18,8 +18,16 @@ function toggleDropdown(event, el) {
         if (card === currentCard) {
             const isOpen = content.classList.toggle('show');
             if (isOpen) {
-                // Set to actual height for smooth expand beyond CSS cap
+                // Set to actual height for smooth expand
                 content.style.maxHeight = content.scrollHeight + 'px';
+                // After transition, allow natural height (auto) to accommodate dynamic content
+                const onTransitionEnd = (e) => {
+                    if (e.propertyName === 'max-height') {
+                        content.style.maxHeight = 'none';
+                        content.removeEventListener('transitionend', onTransitionEnd);
+                    }
+                };
+                content.addEventListener('transitionend', onTransitionEnd);
             } else {
                 content.style.maxHeight = null;
             }

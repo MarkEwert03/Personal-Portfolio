@@ -37,8 +37,10 @@
 }
 
 .dropdown-content.show {
-    max-height: 500px;
+    /* Allow it to expand naturally; JS will remove max-height after transition */
+    max-height: 1000px; /* large enough for transition */
     padding-top: 1rem !important;
     padding-bottom: 1rem !important;
     opacity: 1;
+    overflow: visible; /* ensure link at bottom is not clipped */
 }
