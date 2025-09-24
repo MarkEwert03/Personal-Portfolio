@@ -5,26 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mark Ewert - Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary': '#3b82f6',
-            'secondary': '#8b5cf6',
-          }
-        }
-      }
-    }
-  </script>
 </head>
 
-<body class="bg-gray-900 text-white font-sans">
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans transition-colors duration-300">
   <!-- Header -->
-  <header class="bg-gray-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50">
+  <header class="bg-white/70 dark:bg-gray-900/70 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-colors duration-300">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#"
         class="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">ME</a>
@@ -36,16 +23,26 @@
         <li><a href="#contact" class="hover:text-primary transition-colors duration-300">
             Contact</a>
         </li>
+        <li>
+          <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-700 dark:hover:bg-gray-600 transition-colors duration-300" aria-label="Toggle theme">
+            <svg id="theme-toggle-dark-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <svg id="theme-toggle-light-icon" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
   <!-- Hero Section -->
-  <section id="hero" class="min-h-screen flex items-center justify-center text-center bg-gray-900">
+  <section id="hero" class="min-h-screen flex items-center justify-center text-center bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="container mx-auto px-6">
-      <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
+      <h1 class="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">
         Mark Ewert
       </h1>
-      <p class="text-xl md:text-2xl text-gray-400 mb-8">
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8 transition-colors duration-300">
         CPSC + Math Undergraduate Student @ UBC
       </p>
       <a href="#projects"
@@ -53,7 +50,7 @@
         View Some of my Projects</a>
     </div>
   </section>
-  <section id="about" class="py-20 bg-gray-800/50">
+  <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
     <div class="container mx-auto px-6">
       <h2
         class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -64,7 +61,7 @@
           <img src="assets/img/profile.jpg" alt="Profile Picture" class="rounded-full mx-auto w-48 h-48 object-cover">
         </div>
         <div class="md:w-2/3 md:pl-12">
-          <p class="text-gray-300 mb-6">
+          <p class="text-gray-600 dark:text-gray-300 mb-6 transition-colors duration-300">
             Hi, I'm Mark!<br><br>
 
             I am a 4th-year undergraduate student at the University of British Columbia pursuing a Combined Major in
@@ -80,19 +77,19 @@
             I'm also a big fan of board and card games.
             I enjoy the problem-solving, strategy, and friendly competition that comes with them.<br><br>
           </p>
-          <h3 class="text-2xl font-bold text-white mb-4">Skills</h3>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 transition-colors duration-300">Skills</h3>
           <ul class="flex flex-wrap gap-4">
-            <li class="bg-gray-700 text-white py-2 px-4 rounded-full">Python</li>
-            <li class="bg-gray-700 text-white py-2 px-4 rounded-full">C++</li>
-            <li class="bg-gray-700 text-white py-2 px-4 rounded-full">Data Science</li>
-            <li class="bg-gray-700 text-white py-2 px-4 rounded-full">Mathematical Modelling</li>
+            <li class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-full transition-colors duration-300">Python</li>
+            <li class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-full transition-colors duration-300">C++</li>
+            <li class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-full transition-colors duration-300">Data Science</li>
+            <li class="bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-4 rounded-full transition-colors duration-300">Mathematical Modelling</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
   <!-- Projects Section -->
-  <section id="projects" class="py-20">
+  <section id="projects" class="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
     <div class="container mx-auto px-6">
       <h2
         class="text-4xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -101,7 +98,7 @@
       <div class="columns-1 md:columns-2 lg:columns-3 gap-x-8">
         <!-- Project Card 1 -->
         <div
-          class="project-card bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8"
+          class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8 transition-colors duration-300"
           data-card-index="0">
           <div class="relative" onclick="toggleDropdown(event, this)">
             <img src="assets/img/Pokemon_TCG_Pocket.png" alt="Pokemon_TCG_Pocket"
@@ -111,9 +108,9 @@
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-2xl font-bold text-white mb-2">Pokemon TCG Pocket Extractor</h3>
-            <div class="dropdown-content mt-2 bg-gray-700 rounded p-4">
-              <p class="text-gray-300 mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">Pokemon TCG Pocket Extractor</h3>
+            <div class="dropdown-content mt-2 bg-gray-200 dark:bg-gray-700 rounded p-4 transition-colors duration-300">
+              <p class="text-gray-700 dark:text-gray-300 mb-4 transition-colors duration-300">
                 This is a data workflow project designed to
                 extract detailed information about Pokémon TCG Pocket cards and organize it into a structured database.
                 Primarily developed in Python, the project automates data collection, cleaning, and
@@ -127,7 +124,7 @@
         </div>
         <!-- Project Card 2 -->
         <div
-          class="project-card bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8"
+          class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8 transition-colors duration-300"
           data-card-index="1">
           <div class="relative" onclick="toggleDropdown(event, this)">
             <img src="assets/img/Video_Game_Catalogue.png" alt="Video_Game_Catalogue"
@@ -137,9 +134,9 @@
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-2xl font-bold text-white mb-2">Video Game Catalogue</h3>
-            <div class="dropdown-content mt-2 bg-gray-700 rounded p-4">
-              <p class="text-gray-300 mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">Video Game Catalogue</h3>
+            <div class="dropdown-content mt-2 bg-gray-200 dark:bg-gray-700 rounded p-4 transition-colors duration-300">
+              <p class="text-gray-700 dark:text-gray-300 mb-4 transition-colors duration-300">
                 This is a personal side project aimed at tracking and organizing a
                 comprehensive catalogue of video games along with their related data and relationships. Built using
                 Python, JavaScript, HTML, CSS, and Shell, the project features a user-friendly interface and robust
@@ -153,7 +150,7 @@
         </div>
         <!-- Project Card 3 -->
         <div
-          class="project-card bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8"
+          class="project-card bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg flex flex-col cursor-pointer group break-inside-avoid mb-8 transition-colors duration-300"
           data-card-index="2">
           <div class="relative" onclick="toggleDropdown(event, this)">
             <img src="assets/img/Captive_In_The_Stone.png" alt="Captive_In_The_Stone"
@@ -163,9 +160,9 @@
             </div>
           </div>
           <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-2xl font-bold text-white mb-2">Captive In The Stone</h3>
-            <div class="dropdown-content mt-2 bg-gray-700 rounded p-4">
-              <p class="text-gray-300 mb-4">
+            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 transition-colors duration-300">Captive In The Stone</h3>
+            <div class="dropdown-content mt-2 bg-gray-200 dark:bg-gray-700 rounded p-4 transition-colors duration-300">
+              <p class="text-gray-700 dark:text-gray-300 mb-4 transition-colors duration-300">
                 This is an RPG project developed entirely in Processing. This repository contains the code and assets
                 for a unique role-playing game experience, focusing on interactive storytelling and game mechanics.
                 Through this project, I explored creative game design, graphical programming, and the implementation of
@@ -180,12 +177,12 @@
     </div>
   </section>
   <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-800/50">
+  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800/50 transition-colors duration-300">
     <div class="container mx-auto px-6 text-center">
       <h2 class="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
         Get In Touch
       </h2>
-      <p class="text-gray-400 mb-8">You can contact me or find out more below.
+      <p class="text-gray-600 dark:text-gray-400 mb-8 transition-colors duration-300">You can contact me or find out more below.
       </p>
       <a href="mailto:mewert03@gmail.com"
         class="bg-gradient-to-r from-primary to-secondary text-white font-bold py-3 px-8 rounded-full hover:opacity-90 transition-opacity duration-300">Email
@@ -193,7 +190,7 @@
       <div class="flex justify-center space-x-6 mt-8">
         <!-- GitHub -->
         <a href="https://github.com/MarkEwert03/"
-          class="text-gray-400 hover:text-primary transition-colors duration-300" aria-label="GitHub">
+          class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors duration-300" aria-label="GitHub">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" title="GitHub logo">
             <path fill-rule="evenodd"
               d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.838 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z"
@@ -202,7 +199,7 @@
         </a>
         <!-- Linkedin -->
         <a href="https://www.linkedin.com/in/markewert03//"
-          class="text-gray-400 hover:text-primary transition-colors duration-300" aria-label="Linkedin">
+          class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors duration-300" aria-label="Linkedin">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" title="Linkedin logo">
             <path
               d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -210,7 +207,7 @@
         </a>
         <!-- Facebook -->
         <a href="https://www.facebook.com/mark.ewert.2025"
-          class="text-gray-400 hover:text-primary transition-colors duration-300" aria-label="Facebook">
+          class="text-gray-600 dark:text-gray-400 hover:text-primary transition-colors duration-300" aria-label="Facebook">
           <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" title="Facebook logo">
             <path
               d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v2.385z" />
@@ -220,8 +217,8 @@
     </div>
   </section>
   <!-- Footer -->
-  <footer class="bg-gray-900 text-center py-6">
-    <p class="text-gray-500">&copy; 2025 Mark Ewert. All Rights Reserved.</p>
+  <footer class="bg-white dark:bg-gray-900 text-center py-6 transition-colors duration-300">
+    <p class="text-gray-600 dark:text-gray-500 transition-colors duration-300">&copy; 2025 Mark Ewert. All Rights Reserved.</p>
   </footer>
   <script src="assets/js/scripts.js"></script>
 </body>
